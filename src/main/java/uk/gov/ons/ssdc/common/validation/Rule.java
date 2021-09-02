@@ -1,4 +1,4 @@
-package uk.gov.ons.ssdc.common.model.entity;
+package uk.gov.ons.ssdc.common.validation;
 
 import java.io.Serializable;
 import java.util.Optional;

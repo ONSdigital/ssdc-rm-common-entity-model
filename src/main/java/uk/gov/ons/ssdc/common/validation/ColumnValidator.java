@@ -1,4 +1,4 @@
-package uk.gov.ons.ssdc.common.model.entity;
+package uk.gov.ons.ssdc.common.validation;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
