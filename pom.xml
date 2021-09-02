@@ -19,6 +19,40 @@
     <maven.compiler.target>11</maven.compiler.target>
   </properties>
 
+  <distributionManagement>
+    <snapshotRepository>
+      <id>artifact-registry</id>
+      <url>artifactregistry://europe-west2-maven.pkg.dev/ssdc-rm-ci/rm-snapshots</url>
+    </snapshotRepository>
+    <repository>
+      <id>artifact-registry</id>
+      <url>artifactregistry://europe-west2-maven.pkg.dev/ssdc-rm-ci/rm-snapshots</url>
+    </repository>
+  </distributionManagement>
+
+  <repositories>
+    <repository>
+      <id>artifact-registry</id>
+      <url>artifactregistry://europe-west2-maven.pkg.dev/ssdc-rm-ci/rm-snapshots</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </repository>
+  </repositories>
+
+  <build>
+    <extensions>
+      <extension>
+        <groupId>com.google.cloud.artifactregistry</groupId>
+        <artifactId>artifactregistry-maven-wagon</artifactId>
+        <version>2.1.1</version>
+      </extension>
+    </extensions>
+  </build>
+
   <dependencies>
     <dependency>
       <groupId>org.springframework.boot</groupId>
