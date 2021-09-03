@@ -33,3 +33,4 @@ What would you have instead? A shared RESTful CRUD API instead of a shared data 
 In short, no it's not an antipattern. Distributed monoliths are the antipattern, which this pattern is the alternative to.
 
 testing
+trigger please
