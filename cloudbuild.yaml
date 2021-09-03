@@ -2,5 +2,3 @@ steps:
   - name: maven:3-jdk-11
     entrypoint: mvn
     args: ['deploy']
-options:
-  logging: CLOUD_LOGGING_ONLY
