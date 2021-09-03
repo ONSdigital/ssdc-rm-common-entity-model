@@ -31,3 +31,5 @@ In short, changing anything to do with validation needs to be release managed ve
 What would you have instead? A shared RESTful CRUD API instead of a shared data model? That would suffer the same tight coupling problems. In fact it would be WORSE because all microservices would then have a single point of failure on the CRUD REST API, instead of the high availability Google Cloud SQL instance, which Google guarantee 99.999% uptime on.
 
 In short, no it's not an antipattern. Distributed monoliths are the antipattern, which this pattern is the alternative to.
+
+testing
