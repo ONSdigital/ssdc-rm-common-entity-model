@@ -6,7 +6,24 @@ The data model governs every part of RM so it makes no sense to attempt to slice
 
 ## How does this work?
 
-Commit changes to the `main` branch of this repo, and Cloud Build will build the code, package it up into a JAR file, and deploy it to Artifact Registry, where it can be included as a dependency in any projects that need it.
+Commit changes to the `main` branch of this repo, and Cloud Build will build the code, package it up into a JAR file, and deploy it to Artifact Registry, where it can be included as a dependency in any projects that need it. Read the next section for more specific instructions on how to develop using this new pattern.
+
+## How do I develop and test changes to the model?
+
+The process:
+1. Clone this repo (if required)
+2. Create a branch
+3. IMPORTANT: update the `version` at the top of `pom.xml` to be a unique version with your name in it... for example `123-FRED-BLOGGS`
+4. Make your changes
+5. Build your changes _locally_ with `mvn clean install`
+6. Change your other projects to use your version, by altering the dependency version
+7. Make your code changes in the other projects
+8. When you're done, update update the `version` at the top of `pom.xml` to increment as a major or minor version, depending on whether the changes are breaking or not
+9. Publish your branch and raise your pull request... note, this will actually end up building the snapshot
+10. IF MODEL HAS CHANGED: Update the DDL in the ssdc-rm-ddl repo, based on your branch of this repo... and raise PR etc
+11. Update dependent projects to use the 'proper' version, and raise pull requests on them
+
+This will allow other developers to easily build and test your changes.
 
 ## What projects use this code?
 
