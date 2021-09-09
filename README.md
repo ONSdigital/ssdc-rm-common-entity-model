@@ -18,7 +18,7 @@ The process:
 5. Build your changes _locally_ with `mvn clean install`
 6. Change your other projects to use your version, by altering the dependency version
 7. Make your code changes in the other projects
-8. When you're done, update update the `version` at the top of `pom.xml` to increment as a major or minor version, depending on whether the changes are breaking or not
+8. When you're done, update update the `version` at the top of `pom.xml` to increment as a major or minor version, depending on whether the changes are breaking or not. **BE CAREFUL** to check that nobody else has published a branch which uses the version you want to use.
 9. Publish your branch and raise your pull request... note, this will actually end up building the snapshot
 10. IF MODEL HAS CHANGED: Update the DDL in the ssdc-rm-ddl repo, based on your branch of this repo... and raise PR etc
 11. Update dependent projects to use the 'proper' version, and raise pull requests on them
