@@ -1,0 +1,17 @@
+language: java
+jdk: openjdk11
+
+before_install:
+  - mvn fmt:check
+
+install: echo "SKIPPING DEFAULT INSTALL" # Travis has a default maven install. Don't build twice!
+
+script: travis_wait mvn compile
+
+cache:
+  directories:
+  - $HOME/.m2
+
+branches:
+  only:
+  - main
