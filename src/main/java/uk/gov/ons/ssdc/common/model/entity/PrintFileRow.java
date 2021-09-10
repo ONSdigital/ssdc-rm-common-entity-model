@@ -17,10 +17,10 @@ public class PrintFileRow {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private long id;
 
-  @Column
+  @Column(nullable = false)
   private String row;
 
-  @Column
+  @Column(nullable = false)
   private UUID batchId;
 
   @Column(nullable = false)
