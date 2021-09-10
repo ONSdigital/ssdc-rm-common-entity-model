@@ -7,7 +7,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
 import java.util.UUID;
 
 
@@ -18,10 +17,8 @@ public class PrintFileRow {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private long id;
 
+  @Column
   private String row;
-
-  @ManyToOne
-  private ActionRule actionRule;
 
   @Column
   private UUID batchId;
