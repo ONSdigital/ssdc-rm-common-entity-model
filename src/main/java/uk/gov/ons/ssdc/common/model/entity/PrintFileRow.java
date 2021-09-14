@@ -1,14 +1,12 @@
 package uk.gov.ons.ssdc.common.model.entity;
 
-import lombok.Data;
-
+import java.util.UUID;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import java.util.UUID;
-
+import lombok.Data;
 
 @Data
 @Entity

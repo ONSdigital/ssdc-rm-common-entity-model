@@ -21,4 +21,9 @@ public class FulfilmentToProcess {
   @Column private Integer batchQuantity;
 
   @Column private UUID batchId;
+
+  @Column(nullable = false)
+  private UUID correlationId;
+
+  @Column private String originatingUser;
 }
