@@ -2,6 +2,7 @@ package uk.gov.ons.ssdc.common.model.entity;
 
 public enum JobRowStatus {
   STAGED,
-  PROCESSED_OK,
-  PROCESSED_ERROR
+  VALIDATED_OK,
+  VALIDATED_ERROR,
+  PROCESSED
 }
