@@ -43,7 +43,13 @@ public class Job {
   private int fileRowCount;
 
   @Column(nullable = false)
+  private int errorRowCount;
+
+  @Column(nullable = false)
   private int stagingRowNumber;
+
+  @Column(nullable = false)
+  private int validatingRowNumber;
 
   @Column(nullable = false)
   private int processingRowNumber;
