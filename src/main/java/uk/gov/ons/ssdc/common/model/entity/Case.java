@@ -62,7 +62,7 @@ public class Case {
   private boolean invalid;
 
   @Column(nullable = false, columnDefinition = "BOOLEAN DEFAULT false")
-  private boolean surveyLaunched;
+  private boolean eqLaunched;
 
   @Type(type = "jsonb")
   @Column(columnDefinition = "jsonb")
